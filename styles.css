@@ -1,0 +1,149 @@
+/* L'image de Titre */
+#Logo_Hub_Gonzzo {
+    
+    margin-top: 150px;
+    width: 800px; 
+    height: auto; 
+    border-radius: 5px;
+}
+
+/* Le media querie pour ce logo */
+@media only screen and (max-width: 600px) {
+    /* Styles spécifiques pour les écrans de moins de 600px de large */
+    #Logo_Hub_Gonzzo {
+        max-width: 100%;
+    }
+}
+
+/* Style de la vidéo en background */
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+/* Le media querie pour cette vidéo (écran 600px) */
+@media only screen and (max-width: 600px) {
+    video {
+        width: auto;
+        height: auto;
+    }
+}
+
+/* Style de base du corps de la page */
+body {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#reseaux-sociaux {
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    font-size: 40px;
+    color: #ffffff;
+    text-decoration: none;
+    width: 100%; 
+    max-width: 100%;
+    height: auto; 
+
+}
+
+.social-icon:hover {
+    color: #000000;
+}
+
+@media only screen and (max-width: 600px) {
+    .social-icon {
+        font-size: 20px;
+    }
+}
+
+/* ========================= */
+/*       PAGE D'ACCUEIL      */
+/* ========================= */
+
+.accueil-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* On peut réduire un peu le margin-top sur l'accueil si tu veux */
+.accueil-container #Logo_Bingonzzo {
+    margin-top: 80px;
+}
+
+/* Conteneur des 3 boutons du menu */
+.menu-boutons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Sur écran plus large, les boutons passent en ligne */
+@media only screen and (min-width: 768px) {
+    .menu-boutons {
+        flex-direction: row;
+    }
+}
+
+/* Boutons du menu d'accueil : même style que boutonGenerer/Partager */
+.menu-bouton {
+    display: inline-block;
+    padding: 18px 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    background-color: #000000;
+    color: white;
+    border: 2px solid #585858;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, color 0.3s, transform 0.15s, box-shadow 0.15s;
+}
+
+.menu-bouton:hover {
+    background-color: white;
+    color: #000000;
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+    .menu-bouton {
+        width: 100%;
+        font-size: 16px;
+        padding: 14px 16px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .menu-bouton {
+        font-size: 14px;
+        padding: 12px 12px;
+    }
+}
