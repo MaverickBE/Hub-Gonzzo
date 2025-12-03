@@ -154,7 +154,39 @@ body {
     }
 }
 
-#mort-pre-btn {
-    display: none !important;
+/* ===== BADGE NEW ANIMÉ ===== */
+.new-badge {
+    position: relative;
+    overflow: visible;
 }
+
+/* Le petit badge */
+.new-badge::after {
+    content: "NEW";
+    position: absolute;
+    top: -8px;
+    right: -8px;
+
+    background: #ff0000;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 6px;
+    border-radius: 6px;
+
+    border: 1px solid #ffffffa9;
+    box-shadow: 0 0 6px rgba(255, 0, 0, 0.8);
+
+    animation: newBounce 1.6s infinite ease-in-out;
+    transform-origin: center;
+}
+
+/* Petite animation rebond / pulsation */
+@keyframes newBounce {
+    0%   { transform: scale(1) rotate(0deg); }
+    40%  { transform: scale(1.15) rotate(2deg); }
+    60%  { transform: scale(1.15) rotate(-2deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
 
